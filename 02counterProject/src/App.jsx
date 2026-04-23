@@ -6,13 +6,19 @@ import './App.css'
 
 function App() {
 
-  let [counter,setCounter]=useState(0)
+  const [counter,setCounter]=useState(0)
 
   const addValue=()=>{
-    counter===20?counter:setCounter(++counter)
+    
+    // Instead Of this use provided callback in setState() which returns Prev Value. ex: setCounter((prevCounter)=>(prevCounter+1))
+    counter===20?counter:setCounter(counter+1)
+    counter===20?counter:setCounter(counter+1)
+    counter===20?counter:setCounter(counter+1)
+    counter===20?counter:setCounter(counter+1)
+    counter===20?counter:setCounter(counter+1)
   }
   const removeValue=()=>{
-    counter===0?counter:setCounter(--counter)
+    counter===0?counter:setCounter(counter-1)
   }
 
   return (
